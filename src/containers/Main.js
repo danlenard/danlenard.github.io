@@ -60,7 +60,7 @@ export default class Main extends Component {
           <Podcast />
           <Profile />
           <Footer />
-          <Top />
+          {/* <Top /> */}
         </StyleProvider>
       </div>
     );
