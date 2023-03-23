@@ -7,17 +7,15 @@
 import emoji from "react-easy-emoji";
 
 const illustration = {
-  animated: true // set to false to use static SVG
+  animated: false // set to false to use static SVG
 };
 
 const greeting = {
   username: "Dan Lenard Hacutina",
   title: "Hi, I'm Dan",
-  subTitle: emoji(
-    "A Software Developer having more than 2 years of work experience in building Web applications with JavaScript / Reactjs and some other cool libraries and frameworks. I'm aspiring to be a full stack developer to expand my skill and knowledge about every layer of development."
-  ),
+  subTitle: "A Software Developer having more than 3 years of work experience in building Web applications using Reactjs and Django with some libraries.",
   resumeLink:
-    "https://drive.google.com/file/d/1ofFdKF_mqscH8WvXkSObnVvC9kK7Ldlu/view?usp=sharing",
+    "https://drive.google.com/file/d/1NdFHF15tNA__h7cjlHbBr1n5Rd9E-utM/view?usp=share_link",
   displayGreeting: true // Set false to hide this section, defaults to true
 };
 
@@ -25,7 +23,7 @@ const greeting = {
 
 const socialMediaLinks = {
   github: "https://github.com/danlenard",
-  linkedin: "https://www.linkedin.com/in/dan-lenard-hacutina/",
+  linkedin: "https://www.linkedin.com/in/dan-lenard-hacutina-17b508190/",
   gmail: "danhacutina@gmail.com",
   // gitlab: "https://gitlab.com/saadpasta",
   // facebook: "https://www.facebook.com/saad.pasta7",
@@ -39,15 +37,16 @@ const socialMediaLinks = {
 
 const skillsSection = {
   title: "What I do",
-  subTitle: "Software Developer who wants to learn every tech stack",
+  subTitle: "Software Developer who are eager to showcase skills and learn.",
   skills: [
     emoji(
-      "⚡ Develop interactive Front end / User Interfaces for your web"
+      "• Develop interactive Front end / User Interfaces for your web."
     ),
-    emoji("⚡ Passionate at learning and practicing nodejs and mySQL"),
-    // emoji(
-    //   "⚡ Integration of third party services such as Firebase/ AWS / Digital Ocean"
-    // )
+    emoji("• Passionate at writing scripts for automation."),
+    emoji(
+      "• API integration of third party services."
+    ),
+    emoji("• Documenting and managing version and changes.")
   ],
 
   /* Make Sure to include correct Font Awesome Classname to view your icon
@@ -55,16 +54,12 @@ https://fontawesome.com/icons?d=gallery */
 
   softwareSkills: [
     {
-      skillName: "html-5",
+      skillName: "html",
       fontAwesomeClassname: "fab fa-html5"
     },
     {
-      skillName: "css3",
-      fontAwesomeClassname: "fab fa-css3-alt"
-    },
-    {
-      skillName: "less",
-      fontAwesomeClassname: "fab fa-less"
+      skillName: "css",
+      fontAwesomeClassname: "fa fa-file-code"
     },
     {
       skillName: "JavaScript",
@@ -86,22 +81,10 @@ https://fontawesome.com/icons?d=gallery */
       skillName: "sql-database",
       fontAwesomeClassname: "fas fa-database"
     },
-    // {
-    //   skillName: "aws",
-    //   fontAwesomeClassname: "fab fa-aws"
-    // },
     {
-      skillName: "firebase",
-      fontAwesomeClassname: "fas fa-fire"
+      skillName: "python",
+      fontAwesomeClassname: "fab fa-python"
     },
-    // {
-    //   skillName: "python",
-    //   fontAwesomeClassname: "fab fa-python"
-    // },
-    {
-      skillName: "docker",
-      fontAwesomeClassname: "fab fa-docker"
-    }
   ],
   display: true // Set false to hide this section, defaults to true
 };
@@ -135,17 +118,21 @@ const techStack = {
       progressPercentage: "77%" //Insert relative proficiency in percentage
     },
     {
-      Stack: "NodeJS",
-      progressPercentage: "65%"
-    },
-    {
-      Stack: "MySQL",
-      progressPercentage: "68%"
-    },
-    {
       Stack: "Design",
       progressPercentage: "53%"
-    }
+    },
+    {
+      Stack: "Django",
+      progressPercentage: "75%"
+    },
+    {
+      Stack: "API",
+      progressPercentage: "79%"
+    },
+    {
+      Stack: "SQL",
+      progressPercentage: "70%"
+    },
   ],
   displayCodersrank: false // Set true to display codersrank badges section need to changes your username in src/containers/skillProgress/skillProgress.js:17:62, defaults to false
 };
@@ -156,11 +143,24 @@ const workExperiences = {
   display: true, //Set it to true to show workExperiences Section
   experience: [
     {
+      role: "Web Developer",
+      company: "Opo Networks Corp.",
+      companylogo: require("./assets/images/opo-networks.jpg"),
+      date: "July 2021 – January 2023",
+      desc: "Backend api developer that is responsible in writing the web services and APIs used by front-end developers.",
+      descBullets: [
+        "Collaborate with Front-end developer to integrate user-facing elements with server-side logic.",
+        "Creating precise audit report automation of company data against 3rd party service providers.",
+        "Worked with the company developers to develop API systems for other internal applications.",
+        "Adjusting old data for discrepancies and submitting list of changes.",
+      ]
+    },
+    {
       role: "Software Developer",
       company: "Code Disruptors, Inc.",
-      companylogo: require("./assets/images/CDILogo.png"),
+      companylogo: require("./assets/images/code-disruptors.png"),
       date: "July 2018 – October 2020",
-      desc: "Frontend web developer responsible for building the ‘client-side’ of web applications. Translate company and customer needs into functional and appealing interactive applications.",
+      desc: "Frontend web developer responsible for building the client-side of web applications. Translate company and customer needs into functional and appealing interactive applications.",
       descBullets: [
         "Designed and built web-based applications using ReactJS.",
         "Develop and maintain HTML-based responsive pages.",
@@ -191,22 +191,29 @@ const openSource = {
 
 const bigProjects = {
   title: "Projects",
-  subtitle: "Projects I have contributed during my past job(s)",
+  subtitle: "Projects I have contributed during my past jobs",
   projects: [
+    {
+      // image: require("./assets/images/Chronos.jpg"),
+      projectName: "dj-whadmin",
+      projectDesc: "An internal web application used as central system to store and send data to other applications.",
+      usedStack: "Python, Django, PostgreSQL"
+    },
     {
       image: require("./assets/images/Chronos.jpg"),
       projectName: "Chronos",
-      projectDesc: "A mobile and internal website system developed to monitor and track couriers upon collection and deliveries.",
+      projectDesc: "A mobile and internal web app developed to monitor and track couriers upon collection and deliveries.",
     },
     {
-      image: require("./assets/images/Alexsys.jpg"),
+      image: require("./assets/images/alexsys-sample.JPG"),
       projectName: "Advance Logistics Express System",
       projectDesc: "Tracking of order booking upto its last transaction with cashiering, vehicle GPS tracking and user authentication.",
     },
     {
-      image: require("./assets/images/Pawnhero.jpg"),
+      image: require("./assets/images/pms-sample-ui.JPG"),
       projectName: "Pawnhero Management System",
       projectDesc: "Item tracking application with user authentication",
+
     }
   ],
   display: true // Set false to hide this section, defaults to true
@@ -327,11 +334,11 @@ const podcastSection = {
 };
 
 const contactInfo = {
-  title: emoji("Contact Me ☎️"),
+  title: "Contact Me",
   subtitle:
     "Discuss a project or just want to say hi? My Inbox is open for all.",
-  number: "+63-9480049966",
-  email_address: "danhacutina@gmail.com"
+  number: "+639859312104",
+  email_address: "danhacutina@gmail.com",
 };
 
 // Twitter Section
