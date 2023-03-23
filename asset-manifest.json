@@ -1,0 +1,42 @@
+{
+  "files": {
+    "main.css": "/static/css/main.85b56d60.chunk.css",
+    "main.js": "/static/js/main.d499cb29.chunk.js",
+    "main.js.map": "/static/js/main.d499cb29.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.e13621bf.js",
+    "runtime-main.js.map": "/static/js/runtime-main.e13621bf.js.map",
+    "static/js/2.9897e38c.chunk.js": "/static/js/2.9897e38c.chunk.js",
+    "static/js/2.9897e38c.chunk.js.map": "/static/js/2.9897e38c.chunk.js.map",
+    "static/css/3.d29f9f24.chunk.css": "/static/css/3.d29f9f24.chunk.css",
+    "static/js/3.662e7436.chunk.js": "/static/js/3.662e7436.chunk.js",
+    "static/js/3.662e7436.chunk.js.map": "/static/js/3.662e7436.chunk.js.map",
+    "static/css/4.7369bb08.chunk.css": "/static/css/4.7369bb08.chunk.css",
+    "static/js/4.ff69d91a.chunk.js": "/static/js/4.ff69d91a.chunk.js",
+    "static/js/4.ff69d91a.chunk.js.map": "/static/js/4.ff69d91a.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.870bcb5b129841e6af2e6fb6c7227f52.js": "/precache-manifest.870bcb5b129841e6af2e6fb6c7227f52.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/3.d29f9f24.chunk.css.map": "/static/css/3.d29f9f24.chunk.css.map",
+    "static/css/4.7369bb08.chunk.css.map": "/static/css/4.7369bb08.chunk.css.map",
+    "static/css/main.85b56d60.chunk.css.map": "/static/css/main.85b56d60.chunk.css.map",
+    "static/js/2.9897e38c.chunk.js.LICENSE.txt": "/static/js/2.9897e38c.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/static/media/Montserrat-Regular.847627bf.ttf",
+    "static/media/CCCLogo.jpg": "/static/media/CCCLogo.dfd43cf7.jpg",
+    "static/media/Chronos.jpg": "/static/media/Chronos.c77a17ba.jpg",
+    "static/media/alexsys-sample.JPG": "/static/media/alexsys-sample.a4cf2927.JPG",
+    "static/media/codeInLogo.webp": "/static/media/codeInLogo.47a7a717.webp",
+    "static/media/developerActivity.svg": "/static/media/developerActivity.59389695.svg",
+    "static/media/googleAssistantLogo.webp": "/static/media/googleAssistantLogo.e79c6392.webp",
+    "static/media/manOnTable.svg": "/static/media/manOnTable.52be3144.svg",
+    "static/media/pms-sample-ui.JPG": "/static/media/pms-sample-ui.dd4f20d4.JPG",
+    "static/media/pwaLogo.webp": "/static/media/pwaLogo.ee62cb58.webp",
+    "static/media/skill.svg": "/static/media/skill.34409398.svg",
+    "static/media/TalkCard.scss": "/static/media/talksCardBack.13780cdd.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e13621bf.js",
+    "static/js/2.9897e38c.chunk.js",
+    "static/css/main.85b56d60.chunk.css",
+    "static/js/main.d499cb29.chunk.js"
+  ]
+}
