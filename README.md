@@ -1,36 +1,68 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Dan Lenard Hacutina
 
-## Getting Started
+My personal portfolio. Built with Next.js (App Router), TypeScript, Tailwind CSS v4, Framer Motion, and lucide-react.
 
-First, run the development server:
+Live site: [danlenard.github.io](https://danlenard.github.io)
+
+## Running locally
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Editing content
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+I keep the text in `src/data/` so most updates don't require touching a component:
 
-## Learn More
+- `profile.ts` - name, role, bio, socials, resume path
+- `skills.ts` - skill groups
+- `experience.ts` - work history
+- `projects.ts` - project cards
+- `certifications.ts` - certifications
 
-To learn more about Next.js, take a look at the following resources:
+## Theme
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Light mode is the default. On a first visit the site follows the OS setting. Once someone uses the sun/moon toggle, their choice is saved in `localStorage` under `theme` and wins over system changes. Both palettes are defined in `src/app/globals.css` under `[data-theme="light"]` and `[data-theme="dark"]`.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Resume
 
-## Deploy on Vercel
+The download buttons point to `public/Dan_Lenard_Hacutina_Resume.pdf`, so the saved file keeps that name. Replace that PDF when the resume changes. If the file name changes, update `resumeUrl` in `src/data/profile.ts` as well.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Contact form
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+The form sends messages through Formspree.
+
+1. Sign in at [formspree.io](https://formspree.io) and create a form for the email address where I want to receive messages.
+2. Open the form and copy its endpoint URL. It looks like `https://formspree.io/f/mzbwabcd`.
+3. The form ID is the last part of that URL, `mzbwabcd` in this example.
+4. Create `.env.local` in the project root and add it:
+
+```bash
+NEXT_PUBLIC_FORMSPREE_ID=mzbwabcd
+```
+
+For the deployed site, add the same value as a repository variable named `NEXT_PUBLIC_FORMSPREE_ID` in Settings > Secrets and variables > Actions > Variables. The workflow passes it into the build. It isn't a secret, since the browser needs it to submit the form.
+
+If the variable is missing, the form shows a "not configured" message instead of sending anything.
+
+## Deployment
+
+The portfolio is a static export served by GitHub Pages. `next build` writes the site to `out/`, and `.github/workflows/deploy.yml` deploys it on every push to `main`.
+
+First-time setup in the repository:
+
+1. Go to Settings > Pages and set Source to GitHub Actions.
+2. Add the `NEXT_PUBLIC_FORMSPREE_ID` variable mentioned above.
+3. Push to `main` and wait for the workflow to finish.
+
+The workflow gets the base path from `actions/configure-pages`, so the setup works for both a `<user>.github.io` repo and a regular project repo.
+
+## Checks
+
+```bash
+npm run lint
+npm run build
+```
