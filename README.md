@@ -39,7 +39,7 @@ The form sends messages through Formspree.
 
 1. Sign in at [formspree.io](https://formspree.io) and create a form for the email address where I want to receive messages.
 2. Open the form and copy its endpoint URL. It looks like `https://formspree.io/f/mzbwabcd`.
-3. The form ID is the last part of that URL, `mzbwabcd` in this example.
+3. The form ID is the last part of that URL, `mzbwabcd` in this example. Pasting the whole endpoint URL instead also works; it's normalized before use.
 4. Create `.env.local` in the project root and add it:
 
 ```bash

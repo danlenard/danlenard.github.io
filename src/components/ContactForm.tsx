@@ -3,7 +3,20 @@
 import { useState } from "react";
 import type { FormEvent } from "react";
 
-const FORM_ID = process.env.NEXT_PUBLIC_FORMSPREE_ID ?? "";
+// Accepts either the bare form ID (mbgdeobv) or the full endpoint URL
+// (https://formspree.io/f/mbgdeobv), since both are common copy-paste values.
+function normalizeFormspreeId(value: string | undefined): string {
+  const raw = value?.trim() ?? "";
+  if (!raw) return "";
+
+  const match = raw.match(/(?:^|\/)f\/([^/?#]+)/);
+  if (match) return match[1];
+
+  return raw.replace(/^\/+|\/+$/g, "");
+}
+
+const FORM_ID = normalizeFormspreeId(process.env.NEXT_PUBLIC_FORMSPREE_ID);
+const FORM_ENDPOINT = FORM_ID ? `https://formspree.io/f/${FORM_ID}` : "";
 
 type Status = "idle" | "submitting" | "success" | "error";
 
@@ -13,7 +26,7 @@ export default function ContactForm() {
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    if (!FORM_ID) {
+    if (!FORM_ENDPOINT) {
       setStatus("error");
       setErrorMessage(
         "The contact form is not configured yet. Set NEXT_PUBLIC_FORMSPREE_ID in your environment.",
@@ -24,7 +37,7 @@ export default function ContactForm() {
     const data = new FormData(form);
     setStatus("submitting");
     try {
-      const response = await fetch(`https://formspree.io/f/${FORM_ID}`, {
+      const response = await fetch(FORM_ENDPOINT, {
         method: "POST",
         body: data,
         headers: { Accept: "application/json" },
