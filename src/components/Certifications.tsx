@@ -22,7 +22,9 @@ export default function Certifications() {
                   {cert.title}
                 </h3>
                 <p className="mt-1 text-sm text-muted">{cert.issuer}</p>
-                <p className="mt-1 font-mono text-xs text-accent">{cert.period}</p>
+                <p className="mt-1 font-mono text-xs text-accent">
+                  {cert.period}
+                </p>
                 <p className="mt-3 text-sm leading-7 text-muted">
                   {cert.description}
                 </p>

@@ -7,7 +7,12 @@ type SectionProps = {
   children: ReactNode;
 };
 
-export default function Section({ id, eyebrow, title, children }: SectionProps) {
+export default function Section({
+  id,
+  eyebrow,
+  title,
+  children,
+}: SectionProps) {
   return (
     <section id={id} className="scroll-mt-24 py-20 sm:py-28">
       <div className="mx-auto w-full max-w-5xl px-6">

@@ -29,7 +29,9 @@ Light mode is the default. On a first visit the site follows the OS setting. Onc
 
 ## Resume
 
-The download buttons point to `public/Dan_Lenard_Hacutina_Resume.pdf`, so the saved file keeps that name. Replace that PDF when the resume changes. If the file name changes, update `resumeUrl` in `src/data/profile.ts` as well.
+The download buttons point to `/Dan_Lenard_Hacutina_Resume.pdf`. The PDF lives at the project root and is served by the static route handler in `src/app/Dan_Lenard_Hacutina_Resume.pdf/route.ts`, which `next build` writes to `out/Dan_Lenard_Hacutina_Resume.pdf`.
+
+The file isn't in `public/` on purpose: Next.js refuses to build when a public file and a route share a path, and keeping it at the root also makes the same URL work when GitHub Pages serves the repository itself. Replace that PDF when the resume changes. If the file name changes, rename the route folder and update `resumeUrl` in `src/data/profile.ts` as well.
 
 ## Contact form
 

@@ -8,8 +8,8 @@ export default function Footer() {
       <div className="h-px w-full bg-gradient-to-r from-transparent via-accent/40 to-transparent" />
       <div className="mx-auto flex w-full max-w-5xl flex-col items-center gap-4 px-6 py-10 text-center sm:flex-row sm:justify-between sm:text-left">
         <p className="flex items-center gap-2 text-sm text-muted">
-          <span className="h-1.5 w-1.5 rounded-full bg-accent" />
-          © 2026 {profile.name}. Built with Next.js &amp; Tailwind CSS.
+          <span className="h-1.5 w-1.5 rounded-full bg-accent" />© 2026{" "}
+          {profile.name}. Built with Next.js &amp; Tailwind CSS.
         </p>
         <div className="flex items-center gap-5">
           <a

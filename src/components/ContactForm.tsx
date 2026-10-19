@@ -37,7 +37,9 @@ export default function ContactForm() {
       }
     } catch {
       setStatus("error");
-      setErrorMessage("Something went wrong. Please email me directly instead.");
+      setErrorMessage(
+        "Something went wrong. Please email me directly instead.",
+      );
     }
   }
 
@@ -93,7 +95,9 @@ export default function ContactForm() {
         {status === "submitting" ? "Sending..." : "Send Message"}
       </button>
       {status === "success" && (
-        <p className="text-sm text-accent">Thanks! Your message has been sent.</p>
+        <p className="text-sm text-accent">
+          Thanks! Your message has been sent.
+        </p>
       )}
       {status === "error" && (
         <p className="text-sm text-danger">{errorMessage}</p>

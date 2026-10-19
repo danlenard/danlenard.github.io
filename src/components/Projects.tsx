@@ -7,7 +7,8 @@ export default function Projects() {
   return (
     <Section id="projects" eyebrow="04. Projects" title="Selected Projects">
       <p className="-mt-6 mb-10 text-sm text-muted">
-        Work projects I&apos;ve contributed to — names generalized for confidentiality.
+        Work projects I&apos;ve contributed to — names generalized for
+        confidentiality.
       </p>
       <div className="grid gap-6 sm:grid-cols-2">
         {projects.map((project, i) => (

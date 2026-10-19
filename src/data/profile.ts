@@ -13,7 +13,7 @@ export const profile = {
     "I'm a software engineer with 7+ years of experience building and leading web applications end-to-end. I specialize in React and TypeScript on the frontend, Node.js and Python on the backend, and AWS for scalable, serverless cloud infrastructure.",
     "Currently a Software Engineering Project Lead at Novare, where I build micro frontends with Module Federation, drive code quality, and mentor engineers. I'm passionate about clean architecture, developer experience, and shipping reliable software.",
   ],
-  location: "Metro Manila, Philippines",
+  location: "Laguna, Philippines",
   email: "danhacutina@gmail.com",
   phone: "+63 976 184 3645",
   phoneHref: "tel:+639761843645",
