@@ -31,7 +31,7 @@ export default function About() {
                 <span className="inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-accent-soft text-accent">
                   <Code2 size={15} />
                 </span>
-                {profile.headline}
+                {profile.role}
               </li>
               <li className="flex items-center gap-3">
                 <span className="inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-accent-soft font-mono text-xs text-accent">

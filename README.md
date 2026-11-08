@@ -54,6 +54,8 @@ If the variable is missing, the form shows a "not configured" message instead of
 
 The portfolio is a static export served by GitHub Pages. `next build` writes the site to `out/`, and `.github/workflows/deploy.yml` deploys it on every push to `main`.
 
+Because the app is exported statically, `next start` cannot run it. To preview the production build locally, run `npm run build` and then `npm start` (or `npm run preview`), which serves `out/` with `serve` on port 3000.
+
 First-time setup in the repository:
 
 1. Go to Settings > Pages and set Source to GitHub Actions.

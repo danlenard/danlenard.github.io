@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Inter, JetBrains_Mono, Space_Grotesk } from "next/font/google";
+import { profile } from "@/data/profile";
 import "./globals.css";
 
 const inter = Inter({
@@ -20,13 +21,13 @@ const spaceGrotesk = Space_Grotesk({
 const themeScript = `(function(){try{var t=localStorage.getItem("theme");if(t!=="light"&&t!=="dark"){t=window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light"}document.documentElement.setAttribute("data-theme",t)}catch(e){}})()`;
 
 export const metadata: Metadata = {
-  title: "Dan Lenard Hacutina | Software Engineer",
+  title: `${profile.name} | ${profile.role}`,
   description:
-    "Portfolio of Dan Lenard Hacutina — a software engineer with 7+ years of experience building web applications with React, Node.js, Python, and AWS.",
+    "Portfolio of Dan Lenard Hacutina — senior software engineer and technical lead with 7+ years of experience building enterprise web applications with React, Node.js, Python, and AWS.",
   openGraph: {
-    title: "Dan Lenard Hacutina | Software Engineer",
+    title: `${profile.name} | ${profile.role}`,
     description:
-      "Software engineer with 7+ years of experience building web applications with React, Node.js, Python, and AWS.",
+      "Senior software engineer and technical lead with 7+ years of experience building enterprise web applications with React, Node.js, Python, and AWS.",
     type: "website",
     url: "https://danlenard.github.io",
     siteName: "Dan Lenard Hacutina",

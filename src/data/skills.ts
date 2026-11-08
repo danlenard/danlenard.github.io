@@ -1,49 +1,66 @@
 export type SkillGroup = {
   title: string;
   skills: string[];
+  minor?: boolean;
 };
 
 export const skillGroups: SkillGroup[] = [
   {
-    title: "Languages",
-    skills: ["JavaScript (ES6+)", "TypeScript", "Python", "SQL", "HTML5", "CSS3"],
-  },
-  {
-    title: "Frameworks & Libraries",
+    title: "Frontend",
     skills: [
-      "React.js",
+      "React",
+      "TypeScript",
+      "JavaScript (ES6+)",
       "Redux",
       "React Query",
-      "Node.js",
-      "Express.js",
-      "Django",
-      "Zod",
+      "HTML5",
+      "CSS3",
       "Bootstrap",
-      "Socket.IO",
-      "WebSocket",
-      "Jest",
     ],
   },
   {
-    title: "Cloud & DevOps",
+    title: "Backend",
+    skills: [
+      "Node.js",
+      "Express",
+      "Python",
+      "Django",
+      "REST APIs",
+      "Socket.IO",
+      "WebSocket",
+    ],
+  },
+  {
+    title: "Cloud & Infrastructure",
     skills: [
       "AWS Lambda",
       "API Gateway",
-      "S3",
-      "RDS",
+      "Amazon S3",
+      "Amazon RDS",
       "Kubernetes",
       "CI/CD",
-      "Git",
-      "Vite",
-      "Webpack",
     ],
   },
   {
     title: "Databases",
-    skills: ["PostgreSQL", "MySQL", "DynamoDB"],
+    skills: ["PostgreSQL", "MySQL", "DynamoDB", "SQL"],
+  },
+  {
+    title: "Architecture",
+    skills: [
+      "Micro-frontends",
+      "Module Federation",
+      "Backend-for-Frontend (BFF)",
+      "API integrations",
+    ],
+  },
+  {
+    title: "Testing & Tooling",
+    skills: ["Jest", "Zod", "Git", "Vite", "Webpack"],
   },
   {
     title: "AI-Assisted Development",
+    minor: true,
     skills: ["GitHub Copilot", "Claude", "DeepSeek"],
   },
 ];

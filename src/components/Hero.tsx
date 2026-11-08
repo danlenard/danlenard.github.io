@@ -37,9 +37,6 @@ export default function Hero() {
         <Reveal delay={0.1}>
           <h2 className="mt-6 max-w-3xl font-display text-2xl font-semibold leading-tight tracking-tight text-foreground sm:text-3xl">
             {profile.headline}
-            <span className="mt-2 block text-lg font-normal text-muted sm:text-xl">
-              Building with React, Node.js, Python &amp; AWS.
-            </span>
           </h2>
         </Reveal>
         <Reveal delay={0.15}>
@@ -53,7 +50,7 @@ export default function Hero() {
               href="#projects"
               className="group inline-flex items-center gap-2 rounded-full bg-brand px-6 py-3 text-sm font-semibold text-accent-contrast shadow-[0_18px_40px_-18px_var(--glow)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_24px_50px_-20px_var(--glow)]"
             >
-              View My Work
+              View Featured Projects
               <ArrowRight
                 size={16}
                 className="transition-transform duration-300 group-hover:translate-x-0.5"
@@ -66,6 +63,13 @@ export default function Hero() {
             >
               <Download size={16} />
               Download Resume
+            </a>
+            <a
+              href="#contact"
+              className="inline-flex items-center gap-2 rounded-full border border-border bg-surface/60 px-6 py-3 text-sm font-semibold text-foreground backdrop-blur transition-colors hover:border-accent/50 hover:text-accent"
+            >
+              <Mail size={16} />
+              Contact Me
             </a>
           </div>
         </Reveal>
