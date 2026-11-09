@@ -10,7 +10,7 @@ export const skillGroups: SkillGroup[] = [
     skills: [
       "React",
       "TypeScript",
-      "JavaScript (ES6+)",
+      "JavaScript",
       "Redux",
       "React Query",
       "HTML5",
@@ -19,48 +19,40 @@ export const skillGroups: SkillGroup[] = [
     ],
   },
   {
-    title: "Backend",
-    skills: [
-      "Node.js",
-      "Express",
-      "Python",
-      "Django",
-      "REST APIs",
-      "Socket.IO",
-      "WebSocket",
-    ],
+    title: "Backend & APIs",
+    skills: ["Node.js", "Express", "Python", "Django", "REST APIs", "GraphQL"],
   },
   {
     title: "Cloud & Infrastructure",
     skills: [
       "AWS Lambda",
-      "API Gateway",
+      "Amazon API Gateway",
       "Amazon S3",
       "Amazon RDS",
-      "Kubernetes",
       "CI/CD",
     ],
   },
   {
     title: "Databases",
-    skills: ["PostgreSQL", "MySQL", "DynamoDB", "SQL"],
+    skills: ["PostgreSQL", "MySQL", "DynamoDB"],
   },
   {
-    title: "Architecture",
+    title: "Architecture & Integration",
     skills: [
       "Micro-frontends",
       "Module Federation",
       "Backend-for-Frontend (BFF)",
-      "API integrations",
+      "WebSockets",
+      "Socket.IO",
     ],
   },
   {
-    title: "Testing & Tooling",
-    skills: ["Jest", "Zod", "Git", "Vite", "Webpack"],
+    title: "Testing & Development Tools",
+    skills: ["Jest", "Git", "Vite", "Webpack", "Zod"],
   },
   {
     title: "AI-Assisted Development",
     minor: true,
-    skills: ["GitHub Copilot", "Claude", "DeepSeek"],
+    skills: ["GitHub Copilot"],
   },
 ];

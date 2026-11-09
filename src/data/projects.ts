@@ -44,7 +44,7 @@ export const projects: Project[] = [
     users: "Branch operations staff and finance teams",
     role: "Senior Software Engineer",
     contribution:
-      "Developed frontend functionality and supported code quality through reviews and mentoring. Guided developers in improving API integration patterns, response mapping, and reusable utilities to reduce duplicated code.",
+      "Contributed to frontend development and helped stabilize the application by investigating and resolving issues across frontend and backend modules. Also supported code quality through code reviews and mentoring developers.",
     tech: ["React", "TypeScript", "Python", "Node.js", "AWS Lambda"],
   },
   {
